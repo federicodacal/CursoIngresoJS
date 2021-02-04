@@ -8,6 +8,8 @@ function mostrar()
 	// nombreNuevo=document.getElementById('txtIDnombr3').value; // Da Error -> 8 Uncaught TypeError: Cannot read property 'value' of null
 	nombreNuevo=document.getElementById('txtIdNombre').value;
 	alert(nombreNuevo);
+
+	document.getElementById('txtIdNombre').value = ""; // Reemplaza valor en caja de texto (por la cadena de caracteres vacía)
 }
 
 
