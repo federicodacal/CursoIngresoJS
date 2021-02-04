@@ -10,13 +10,12 @@ function Sumar ()
     let precioTres;
     let resultadoSuma;
 
-    // txtIdPrecioUno  txtIdPrecioDos  txtIdPrecioTres
     precioUno=document.getElementById('txtIdPrecioUno').value;
     precioDos=document.getElementById('txtIdPrecioDos').value;
     precioTres=document.getElementById('txtIdPrecioTres').value;
-	precioUno=parseInt(precioUno);
-    precioDos=parseInt(precioDos);
-    precioTres=parseInt(precioTres);
+	precioUno=parseFloat(precioUno);
+    precioDos=parseFloat(precioDos);
+    precioTres=parseFloat(precioTres);
 
     resultadoSuma=precioUno+precioDos+precioTres;
 	respuesta="El resultado de la suma de precios es: " + resultadoSuma;
@@ -30,23 +29,43 @@ function Promedio ()
     let precioTres;
     let resultadoSuma;
     let promedio;
+    const CANTIDAD_PRECIOS = 3;
 
-    preciosIngresados=3;
     precioUno=document.getElementById('txtIdPrecioUno').value;
     precioDos=document.getElementById('txtIdPrecioDos').value;
     precioTres=document.getElementById('txtIdPrecioTres').value;
-	precioUno=parseInt(precioUno);
-    precioDos=parseInt(precioDos);
-    precioTres=parseInt(precioTres);
+	precioUno=parseFloat(precioUno);
+    precioDos=parseFloat(precioDos);
+    precioTres=parseFloat(precioTres);
 
     resultadoSuma=precioUno+precioDos+precioTres;
-    promedio = resultadoSuma/3;
+    promedio = resultadoSuma/CANTIDAD_PRECIOS;
     respuesta="El promedio de precios es: " + promedio.toFixed(2);
 	alert(respuesta);
 }
+
 function PrecioFinal () 
 {
-	
+    let precioUno;
+    let precioDos;
+    let precioTres;
+    let resultadoSuma;
+    const IVA = 21/100;
+    let precioConIva;
+    let costoIva;
+
+    precioUno=document.getElementById('txtIdPrecioUno').value;
+    precioDos=document.getElementById('txtIdPrecioDos').value;
+    precioTres=document.getElementById('txtIdPrecioTres').value;
+	precioUno=parseFloat(precioUno);
+    precioDos=parseFloat(precioDos);
+    precioTres=parseFloat(precioTres);
+
+    resultadoSuma=precioUno+precioDos+precioTres;
+    costoIva=(resultadoSuma*IVA);
+    precioConIva=resultadoSuma+costoIva;
+    respuesta="El precio final con IVA es: " + precioConIva + " (el costo del IVA es: " + costoIva + ").";
+	alert(respuesta);
 }
 /*
 Nombre: Federico Dacal
