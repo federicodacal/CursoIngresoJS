@@ -26,6 +26,24 @@ function SacarResto()
 }
 
 /*
+Prioridad de Operadores: 
+
+let x = 40;
+let y = 20;
+ley z = 10;
+let resultado;
+
+resultado = x + y * z;	
+alert(resultado);	-> 240
+
+resultado = x * y / z;	
+alert(resultado);	-> 80
+
+resultado =((x + y) / y) * z;	
+alert(resultado);	-> 30
+*/
+
+/*
 Nombre: Federico Dacal
 Ejericio 8 
 */

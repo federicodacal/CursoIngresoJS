@@ -3,11 +3,18 @@ Debemos lograr tomar Los numeros por ID ,
 transformarlos a enteros (parseInt),realizar la operación correcta y 
 mostrar el resulto por medio de "ALERT"
 ej.: "la Resta es 750"*/ 
+
+/* 
+Operadores Aritméticos: +, -, *, /, %.
+Operadores Relacionales
+Operadores Lógicos
+*/
+
 function sumar()
 {	
-	let numeroUno
-	let numeroDos
-	let resultado
+	let numeroUno;
+	let numeroDos;
+	let resultado;
 
 	numeroUno=document.getElementById('txtIdNumeroUno').value;
 	numeroDos=document.getElementById('txtIdNumeroDos').value;
@@ -21,9 +28,9 @@ function sumar()
 
 function restar()
 {
-	let numeroUno
-	let numeroDos
-	let resultado
+	let numeroUno;
+	let numeroDos;
+	let resultado;
 
 	numeroUno=document.getElementById('txtIdNumeroUno').value;
 	numeroDos=document.getElementById('txtIdNumeroDos').value;
@@ -33,13 +40,15 @@ function restar()
 	resultado=numeroUno-numeroDos;
 	respuesta="El resultado de la resta es: " + resultado;
 	alert(respuesta);
+
+	alert(`Resultado es de tipo: ${typeof resultado}, numeroUno es de tipo: ${typeof numeroUno} y numeroDos es de tipo: ${typeof numeroDos}`);
 }
 
 function multiplicar()
 { 
-	let numeroUno
-	let numeroDos
-	let resultado
+	let numeroUno;
+	let numeroDos;
+	let resultado;
 
 	numeroUno=document.getElementById('txtIdNumeroUno').value;
 	numeroDos=document.getElementById('txtIdNumeroDos').value;
@@ -53,9 +62,9 @@ function multiplicar()
 
 function dividir()
 {
-	let numeroUno
-	let numeroDos
-	let resultado
+	let numeroUno;
+	let numeroDos;
+	let resultado;
 
 	numeroUno=document.getElementById('txtIdNumeroUno').value;
 	numeroDos=document.getElementById('txtIdNumeroDos').value;

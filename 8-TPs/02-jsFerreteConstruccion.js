@@ -24,9 +24,41 @@ function Rectangulo ()
 
 function Circulo () 
 {
-	
+    let radio;
+    let alambre;
+    let perimetro;
+    // const PI = 3.14;
+    const PI = Math.PI;
+    const UNIDADES_ALAMBRE = 3;
+
+    radio=document.getElementById('txtIdRadio').value;
+    radio=parseFloat(radio);
+
+    perimetro=2*PI*radio;
+    alambre=perimetro*UNIDADES_ALAMBRE;
+    alert (`La cantidad de alambre necesaria es de ${alambre.toFixed(3)} metros.`);
 }
+
 function Materiales () 
 {
-	
+    let largo;
+    let ancho;
+    let cemento;
+    let cal;
+    let area;
+    const CEMENTO_CADA_METRO = 2;
+    const CAL_CADA_METRO = 3;
+
+    largo=document.getElementById('txtIdLargo').value;
+    ancho=document.getElementById('txtIdAncho').value;
+    largo=parseFloat(largo);
+    ancho=parseFloat(ancho);
+
+    area=ancho*largo; 
+    // Regla de tres simple -> 1 metro cuadrado         = 2 bolsas cemento y 3 bolsas cal
+    //                         area en metros cuadrados = area*2 (bolsas cemento) y area*3 (bolsas de cal)  
+    cemento = area*CEMENTO_CADA_METRO;
+    cal = area*CAL_CADA_METRO;
+
+    alert(`Para un contrapiso de ${area}m2 es necesario comprar ${cemento} bolsas de cemento y ${cal} bolsas de cal`);
 }

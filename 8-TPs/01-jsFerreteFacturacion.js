@@ -51,6 +51,7 @@ function PrecioFinal ()
     let precioTres;
     let resultadoSuma;
     const IVA = 21/100;
+    // const IVA = 0.21;
     let precioConIva;
     let costoIva;
 
@@ -64,7 +65,8 @@ function PrecioFinal ()
     resultadoSuma=precioUno+precioDos+precioTres;
     costoIva=(resultadoSuma*IVA);
     precioConIva=resultadoSuma+costoIva;
-    respuesta="El precio final con IVA es: " + precioConIva + " (el costo del IVA es: " + costoIva + ").";
+    precioConIva=precioConIva.toFixed(2);
+    respuesta=`El precio final con IVA incluido es: $${precioConIva} y  el costo del IVA es:  $${costoIva}.`;
 	alert(respuesta);
 }
 /*
