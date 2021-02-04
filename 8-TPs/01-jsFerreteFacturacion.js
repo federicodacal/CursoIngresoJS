@@ -31,6 +31,7 @@ function Promedio ()
     let resultadoSuma;
     let promedio;
 
+    preciosIngresados=3;
     precioUno=document.getElementById('txtIdPrecioUno').value;
     precioDos=document.getElementById('txtIdPrecioDos').value;
     precioTres=document.getElementById('txtIdPrecioTres').value;
@@ -40,7 +41,7 @@ function Promedio ()
 
     resultadoSuma=precioUno+precioDos+precioTres;
     promedio = resultadoSuma/3;
-    respuesta="El promedio de precios es: " + promedio;
+    respuesta="El promedio de precios es: " + promedio.toFixed(2);
 	alert(respuesta);
 }
 function PrecioFinal () 

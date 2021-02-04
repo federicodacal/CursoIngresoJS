@@ -62,8 +62,8 @@ function dividir()
 	numeroUno=parseInt(numeroUno);
 	numeroDos=parseInt(numeroDos);
 
-	resultado=numeroUno/numeroDos;
-	respuesta="El resultado de la division es: " + resultado;
+	resultado= parseFloat(numeroUno/numeroDos);
+	respuesta="El resultado de la division es: " + resultado.toFixed(2);
 	alert(respuesta);
 }
 
