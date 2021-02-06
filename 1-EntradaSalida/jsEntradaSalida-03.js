@@ -12,4 +12,31 @@ function mostrar()
 	document.getElementById('txtIdNombre').value = ""; // Reemplaza valor en caja de texto (por la cadena de caracteres vacía)
 }
 
+/****************************** 
+EJERCICIO 10bis (1)
+******************************/
 
+/*
+function mostrar()
+{
+    let producto;
+    let precio;
+    let aumento;
+	let porcentajeAumento;
+    let resultado;
+    let mensaje;
+
+    producto=prompt("Ingrese Producto");
+    precio=document.getElementById('txtIdNombre').value;
+	precio=parseFloat(precio);
+
+    console.log(producto);
+    console.log(precio);
+
+    porcentajeAumento=30;
+    aumento=precio*porcentajeAumento/100;
+	resultado=precio+aumento;
+    mensaje=`El producto es ${producto} y su precio final es: $${resultado}`;
+    alert(mensaje);
+}
+*/
