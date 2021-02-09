@@ -11,5 +11,15 @@ function mostrar()
 	else {
 		alert("No es mayor de edad.");
 	}
-	alert("Termina la funcion");
+	alert("Despues del bloque If");
 }
+
+/* Intervalos
+
+>= 18 (mayor o igual a 18)
+[18, +∞)
+
+>17 (mayor a 17)
+(17, +∞)
+
+*/

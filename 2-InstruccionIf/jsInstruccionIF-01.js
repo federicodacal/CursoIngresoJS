@@ -12,7 +12,7 @@ function mostrar()
 	else {
 		alert("La edad no es 15.");
 	}
-	alert("Fin de la función.");
+	alert("Despues del bloque If");
 }
 
 	/*
@@ -22,7 +22,10 @@ function mostrar()
 	{
 		bloque de codigo a ejecutar
 	} 
-	 
+	Fuera del bloque If
+
+---------------------------------------------------------------------------------------
+
 Operando 	Operador 	Operando = Resultado
 
 		Operador Aritmético
@@ -39,27 +42,34 @@ Operando:
 	-boolean (true or false)
 
 		Operador Lógico
-Expresiones	(AND &&, OR ||, NOT !=)	Expresiones
+Expresion	(AND &&, OR ||, NOT !)	Expresion
 
 Ejemplo:
 
+OR
 false || false = false
 false || true = true
 true || false = true
-true || true = false
+true || true = true
+AND
 false && false = false
 false && true = false
 true && false = false
 true && true = true
+NOT
+false -> true 
+true -> false
 
 4>2 	|| 		3>2	= true
 true   	    	true	
 
 Numbers y Strings:
+==
 15 == 15 -> True
 "15" == "15" -> True
 "15" == 15 -> True
 15 == "15" -> True
+===    
 15 === 15 -> True
 "15" === "15" -> True
 "15" === 15 -> False

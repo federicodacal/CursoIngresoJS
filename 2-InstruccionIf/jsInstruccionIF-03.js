@@ -13,5 +13,14 @@ function mostrar()
 	else {
 		alert("No es mayor de edad.");
 	}
-	alert("Termina la funcion");
+	alert("Despues del bloque If/Else");
 }
+
+/*
+	if (condicion){
+		alert("La condicion es True.");
+	}
+	else {
+		alert("La condicion es False.");
+	}
+*/
