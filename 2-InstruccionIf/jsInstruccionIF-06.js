@@ -3,20 +3,22 @@
 function mostrar()
 {
 	let edad;
+	let mensaje;
 
 	edad=document.getElementById('txtIdEdad').value;
 	edad=parseInt(edad);
 
 	if (edad < 13){
-		alert("Es un niño.");
+		mensaje="niño";
 	}
 	else if (edad < 18){
-		alert("Es adolescente.");
+		mensaje="adolescente";
 	}
 	else if (edad < 65){
-	alert("Es mayor de edad.");
+		mensaje="mayor de edad";
 	}
 	else{
-		alert("Es adulto mayor");
+		mensaje="adulto mayor";
 	}
+	alert(`Ud. es ${mensaje}.`);
 }
