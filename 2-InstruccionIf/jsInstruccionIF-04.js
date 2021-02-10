@@ -25,9 +25,4 @@ function mostrar()
 		alert("Es adolescente.");
 	}
 */
-
-	else if (edad >= 18){
-		alert("Es mayor de edad.");
-	}
-
 }
