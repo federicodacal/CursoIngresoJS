@@ -1,9 +1,28 @@
+// CON SWITCH
+
 function mostrar()
 {
-	//tomo el mes
-	var mesDelAño =txtIdMes.value;
-	alert(mesDelAño);
+	let mesDelAño;
+	let mensaje;
 
-
-
-}//FIN DE LA FUNCIÓN
+	mesDelAño=document.getElementById('txtIdMes').value;
+	
+	switch (mesDelAño) {
+		case "Enero": 
+			mensaje="Que comiences bien el año!!!";
+			break;
+		case "Marzo":
+			mensaje="Comienzan las clases!";
+			break;
+		case "Julio":
+			mensaje="Llegan las vacaciones!";
+			break;
+		case "Diciembre":
+			mensaje="Felices Fiestas!";
+			break;
+		default:
+			mensaje="";
+			break;
+	}
+	alert(`El mes es ${mesDelAño}. ${mensaje}`);
+}

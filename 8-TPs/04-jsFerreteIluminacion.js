@@ -79,10 +79,10 @@ function CalcularPrecio ()
                         porcentajeDescuento=10;
                     }
                         else 
-                        {
-                            porcentajeDescuento=5;  
-                        }    
-                    } 
+                            {
+                                porcentajeDescuento=5;  
+                            }    
+                        } 
                     } 
                 }
             } 
@@ -108,5 +108,19 @@ function CalcularPrecio ()
     }
 
 }
+
+
+/*
+varNum;
+...
+...
+varNum = 2; -> asignacion           (varNum = 2)
+...
+...
+varNum = varNum + 4; -> acumulacion (varNum = 6)
+...
+...
+*/
+
 // Nombre: Federico Dacal
 // Division: "A"
