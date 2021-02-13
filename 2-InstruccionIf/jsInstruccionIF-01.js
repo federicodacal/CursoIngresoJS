@@ -78,5 +78,6 @@ Numbers y Strings:
 Errores comunes usando IF:
 
 if();	-> ";" 	
-if(edad <13 && > 17)
+if(edad < 13 && > 17)
+if(edad = 13) -> "="
 */
