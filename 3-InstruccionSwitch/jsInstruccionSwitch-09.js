@@ -1,84 +1,53 @@
 function mostrar()
 {
-	let destino;
-	let estacion;
-	let mensaje;
-	let porcentajeDescuento;
-	let porcentajeAumento;
-	let descuento;
-	let aumento;
 	let costoBase;
+	let localidad;
+	let estacion;
 	let precioFinal;
+	let porcentaje;
+	let indice;
+	let mensaje;
 
 	estacion=document.getElementById('txtIdEstacion').value;
-	destino=document.getElementById('txtIdDestino').value;
-
+	localidad=document.getElementById('txtIdDestino').value;
 	costoBase=15000;
 
-	if(estacion == "Verano")
-		{
-			switch (destino) {
-				case "Bariloche":
-					porcentajeDescuento=20;
-					porcentajeAumento=0;
-					break;
-				case "Cataratas":
-				case "Cordoba":
-					porcentajeAumento=10;
-					porcentajeDescuento=0;	
-					break;
-				case "Mar del plata":
-					porcentajeAumento=20;
-					porcentajeDescuento=0;
-					break;
+	if(estacion == "Invierno"){
+		if(localidad == "Bariloche"){
+			porcentaje=20;
+		}else{
+		if(localidad == "Mar del plata"){
+			porcentaje=-20;
+		}else{
+			porcentaje=-10;
 			}
-		} else 
-			{
-			if(estacion == "Invierno")
-				{
-					switch(destino) {
-						case "Bariloche":
-							porcentajeDescuento=0;
-							porcentajeAumento=20;
-							break;
-						case "Cataratas":
-						case "Cordoba":
-							porcentajeAumento=0;
-							porcentajeDescuento=10;	
-							break;
-						case "Mar del plata":
-							porcentajeAumento=0;
-							porcentajeDescuento=20;
-							break;
-					}
-				} else 
-					{
-						switch (destino) {
-							case "Cordoba":
-								porcentajeAumento=0;
-								porcentajeDescuento=0;	
-								break;
-							default:
-								porcentajeDescuento=0;
-								porcentajeAumento=10;
-								break;
-						}
-				}
 		}
+	}else{
+		if(estacion == "Verano"){
+			if(localidad == "Bariloche"){
+				porcentaje=-20;
+			}else{
+				if(localidad == "Mar del plata"){
+					porcentaje=20;
+				}else{
+					porcentaje=10;
+				}
+			}
+		}else{
+			if(localidad == "Cordoba"){
+					porcentaje=0;
+				}else{
+					porcentaje=10;
+				}
+			}
+	}
 
-	descuento=costoBase*(porcentajeDescuento/100);
-    precioFinal=costoBase-descuento;
+	indice=costoBase*(porcentaje/100);
+	precioFinal=costoBase+indice;
 	console.log(precioFinal);
+	console.log(porcentaje);
+	console.log(indice);
 
-    aumento=precioFinal*(porcentajeAumento/100);
-    precioFinal=precioFinal+aumento;
-	console.log(precioFinal);
-
-	console.log(porcentajeDescuento);
-	console.log(porcentajeAumento);
-	console.log(destino);
-	console.log(estacion);
-	
-	mensaje=`Destino: ${destino}, Estacion: ${estacion}, Precio Final: ${precioFinal}`;
+	mensaje=`Destino: ${localidad}, Estacion: ${estacion}, Precio Final: ${precioFinal}`;
 	alert(mensaje);
-}
+}	

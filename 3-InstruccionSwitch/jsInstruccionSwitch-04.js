@@ -6,12 +6,12 @@ si tiene 31 días.
 
 function mostrar()
 {
-	let mesDelAño;
+	let mes;
 	let mensaje;
 
-	mesDelAño=document.getElementById('txtIdMes').value;
+	mes=document.getElementById('txtIdMes').value;
 
-	switch (mesDelAño) {
+	switch (mes) {
 		case "Febrero":
 			mensaje="Tiene 28 días.";		
 		break;
@@ -25,7 +25,7 @@ function mostrar()
 			mensaje="Tiene 31 días.";
 			break;
 	}
-	alert(`El mes es ${mesDelAño}. ${mensaje}`);
+	alert(`El mes es ${mes}. ${mensaje}`);
 }
 
 // Federico Dacal

@@ -16,10 +16,8 @@ function mostrar()
     let localidad;
     let estacion;
     let precioFinal;
-    let porcentajeAumento;
-    let porcentajeDescuento;
-    let aumento;
-    let descuento;
+    let porcentaje;
+    let indice;
     let mensaje;
 
     estacion=document.getElementById('txtIdEstacion').value;
@@ -28,51 +26,39 @@ function mostrar()
 
     if(estacion == "Invierno"){
         if(localidad == "Bariloche"){
-            porcentajeAumento=20;
-            porcentajeDescuento=0;
+            porcentaje=20;
         }else{
         if(localidad == "Mar del plata"){
-            porcentajeAumento=0;
-            porcentajeDescuento=20;
+            porcentaje=-20;
         }else{
-            porcentajeAumento=0;
-            porcentajeDescuento=10;
+            porcentaje=-10;
             }
         }
     }else{
         if(estacion == "Verano"){
             if(localidad == "Bariloche"){
-                porcentajeAumento=0;
-                porcentajeDescuento=20;
+                porcentaje=-20;
             }else{
                 if(localidad == "Mar del plata"){
-                    porcentajeAumento=20;
-                    porcentajeDescuento=0;
+                    porcentaje=20;
                 }else{
-                    porcentajeAumento=10;
-                    porcentajeDescuento=0;
+                    porcentaje=10;
                 }
             }
         }else{
             if(localidad == "Cordoba"){
-                    porcentajeAumento=0;
-                    porcentajeDescuento=0;
+                    porcentaje=0;
                 }else{
-                    porcentajeAumento=10;
-                    porcentajeDescuento=0;
+                    porcentaje=10;
                 }
             }
     }
 
-	descuento=costoBase*(porcentajeDescuento/100);
-    precioFinal=costoBase-descuento;
+	indice=costoBase*(porcentaje/100);
+    precioFinal=costoBase+indice;
 	console.log(precioFinal);
-
-    aumento=precioFinal*(porcentajeAumento/100);
-    precioFinal=precioFinal+aumento;
-	console.log(precioFinal);
-	console.log(porcentajeDescuento);
-	console.log(porcentajeAumento);
+	console.log(porcentaje);
+    console.log(indice);
 
 	mensaje=`Destino: ${localidad}, Estacion: ${estacion}, Precio Final: ${precioFinal}`;
 	alert(mensaje);

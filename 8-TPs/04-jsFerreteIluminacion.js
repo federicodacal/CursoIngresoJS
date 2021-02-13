@@ -9,104 +9,79 @@ E.	Si el importe final con descuento suma más de $120  se debe sumar un 10% de 
   */
 function CalcularPrecio () 
 {
-    let cantidadLamparas;
-    let precioUnidad;
-    let precioFinal;
-    let precioBruto;
-    let porcentajeDescuento; 
+    let cantidadLamparitas;
+    let costoUnidad;
+    let porcentajeDescuento;
     let descuento;
+    let porcentajeImpuesto;
+    let costoImpuesto;
     let marca;
+    let precioBruto;
+    let precioFinal;
+    let precioConImpuesto;
     let mensaje;
-    let mensaje2;
-    let costoIIBB;
-    let porcentajeIIBB
-    let precioConIIBB;
+    let mensajeImpuesto;
 
-    cantidadLamparas=document.getElementById('txtIdCantidad').value;
-    cantidadLamparas=parseInt(cantidadLamparas);
+    cantidadLamparitas=document.getElementById('txtIdCantidad').value;
+    cantidadLamparitas=parseInt(cantidadLamparitas);
     marca=document.getElementById('Marca').value;
 
-    precioUnidad=35;
-    porcentajeIIBB=10;
-    precioBruto=cantidadLamparas*precioUnidad;
-    console.log(`Cantidad: ${cantidadLamparas}, Marca: ${marca}, Precio Bruto: $${precioBruto}`);
+    costoUnidad=35;
 
-    if (cantidadLamparas >= 6) 
-    {
+    if (cantidadLamparitas >= 6){
         porcentajeDescuento=50;
-    } 
-        else 
-        {
-            if (cantidadLamparas == 5) 
-            {
-                if (marca == "ArgentinaLuz") 
-                {
-                    porcentajeDescuento=40;
+    }else{
+        if(cantidadLamparitas == 5){
+            if (marca == "ArgentinaLuz"){
+                porcentajeDescuento=40;
+            }else{
+                porcentajeDescuento=30;
+            }
+        }else{
+            if(cantidadLamparitas == 4){
+                if(marca == "ArgentinaLuz" || marca == "FelipeLamparas"){
+                    porcentajeDescuento=25;
+                }else{
+                    porcentajeDescuento=20;
                 }
-            else 
-            {
-                if (marca != "ArgentinaLuz") 
-                {    
-                    porcentajeDescuento=30;
+            }else{
+                if(cantidadLamparitas == 3){
+                    if(marca == "ArgentinaLuz"){
+                        porcentajeDescuento=15;
+                    }else{
+                        if(marca == "FelipeLamparas"){
+                            porcentajeDescuento=10;
+                        }else{
+                            porcentajeDescuento=5;
+                        }
+                    }
+                }else {
+                    porcentajeDescuento=0;
                 }
             }
         }
-        else 
-        {  
-            if (cantidadLamparas == 4) 
-            {
-                if (marca == "ArgentinaLuz" || marca == "FelipeLamparas") 
-                {
-                    porcentajeDescuento=25;
-                }
-                else
-                {
-                    porcentajeDescuento=20;
-                }
-            } 
-        else    
-        {
-            if (cantidadLamparas == 3) 
-            {
-                if(marca == "ArgentinaLuz")
-                {
-                    porcentajeDescuento=15; 
-                }
-                else 
-                {
-                    if(marca == "FelipeLamparas")
-                    {
-                        porcentajeDescuento=10;
-                    }
-                        else 
-                            {
-                                porcentajeDescuento=5;  
-                            }    
-                        } 
-                    } 
-                }
-            } 
-        }
+    }   
 
+    precioBruto=cantidadLamparitas*costoUnidad;
     descuento=precioBruto*(porcentajeDescuento/100);
-    console.log(`Descuento: ${descuento}`);
     precioFinal=precioBruto-descuento;
-    console.log(`Precio Final: ${precioFinal}`);
-    costoIIBB=precioFinal*(porcentajeIIBB/100);
-    precioConIIBB=precioFinal+costoIIBB;
-    console.log(`Costo IIBB: ${costoIIBB}, Precio con IIBB: ${precioConIIBB}`);
+    console.log(cantidadLamparitas);
+    console.log(marca);
+    console.log(descuento);
+    console.log(precioBruto);
 
-    document.getElementById('txtIdprecioDescuento').value=precioFinal;
-    mensaje=`Ud. compró ${cantidadLamparas} lamparas de ${marca} y el precio con descuento es $${precioFinal}`;
-    alert(mensaje);
-    mensaje2=`Ud. pago $${precioConIIBB} con IIBB, siendo $${costoIIBB} el impuesto que se pagó.`;
-
-    if (precioFinal > 120)
-    {
-        precioConIIBB=precioFinal+costoIIBB;
-        alert(mensaje2);
+    if (precioFinal > 120){
+        porcentajeImpuesto=10;
+        costoImpuesto=precioFinal*(porcentajeImpuesto/100);
+        precioConImpuesto=precioFinal+costoImpuesto;
+        mensajeImpuesto=`Ud. pagó $${precioConImpuesto}, siendo $${costoImpuesto} el impuesto.`;
+        alert(mensajeImpuesto);
     }
-
+    else {
+        mensaje=`Compraste ${cantidadLamparitas} lamparas de ${marca}. El Precio Final es: $${precioFinal}`;
+        alert(mensaje);
+        document.getElementById('txtIdprecioDescuento').value=precioFinal;
+    }
 }
 
 

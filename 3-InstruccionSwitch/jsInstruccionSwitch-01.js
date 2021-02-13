@@ -2,12 +2,12 @@
 
 function mostrar()
 {
-	let mesDelAño;
+	let mes;
 	let mensaje;
 
-	mesDelAño=document.getElementById('txtIdMes').value;
+	mes=document.getElementById('txtIdMes').value;
 	
-	switch (mesDelAño) {
+	switch (mes) {
 		case "Enero": 
 			mensaje="Que comiences bien el año!!!";
 			break;
@@ -24,5 +24,5 @@ function mostrar()
 			mensaje="";
 			break;
 	}
-	alert(`El mes es ${mesDelAño}. ${mensaje}`);
+	alert(`El mes es ${mes}. ${mensaje}`);
 }

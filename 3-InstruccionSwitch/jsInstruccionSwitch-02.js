@@ -1,11 +1,11 @@
 function mostrar()
 {
-	let mesDelAño;
+	let mes;
 	let mensaje;
 
-	mesDelAño=document.getElementById('txtIdMes').value;
+	mes=document.getElementById('txtIdMes').value;
 
-	switch (mesDelAño) {
+	switch (mes) {
 		case "Enero":
 		case "Febrero":
 		case "Marzo":
