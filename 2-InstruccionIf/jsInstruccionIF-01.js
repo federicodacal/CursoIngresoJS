@@ -74,4 +74,9 @@ Numbers y Strings:
 "15" === "15" -> True
 "15" === 15 -> False
 15 === "15" -> False
+
+Errores comunes usando IF:
+
+if();	-> ";" 	
+if(edad <13 && > 17)
 */
