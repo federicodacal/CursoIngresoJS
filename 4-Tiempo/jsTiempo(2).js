@@ -1,6 +1,5 @@
 var miIntervalo ;
 
-
 function inicio()
 {
 	alert("function inicio.");

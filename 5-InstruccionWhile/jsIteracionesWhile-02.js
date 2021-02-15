@@ -1,10 +1,19 @@
 /*
-al presionar el botón mostrar 10 repeticiones 
-con números DESCENDENTES, desde el 10 al 1.*/
+Al presionar el botón mostrar 10 repeticiones 
+con números DESCENDENTES, desde el 10 al 1.
+*/
 function mostrar()
 {
-	var contador;
-	contador=0; 
-	alert('iteración while');
+	let contador;
+	let mensaje;
 
-}//FIN DE LA FUNCIÓN
+	contador = 10;
+	while(contador >= 1){
+
+		mensaje=contador;
+		console.log(mensaje);
+		alert(mensaje);
+		contador--;
+	}
+	alert(`Fuera del While.`);
+}
