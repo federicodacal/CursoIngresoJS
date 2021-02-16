@@ -4,15 +4,67 @@ e informar la suma acumulada y el promedio.
 */
 function mostrar()
 {
-	var contador;
-	var acumulador;
-	var respuesta;
+	let contador;
+	let acumulador;
+	let numeroIngresado;
+	let promedio;
+	let seguir;
+
+	// Inicializar contador y acumulador
 	contador=0;
 	acumulador=0;
-	respuesta='si';
+	seguir = 's';
+	
+	while(seguir == 's'){
+		numeroIngresado=parseInt(prompt("Ingrese un número: "));
+		acumulador+=numeroIngresado;
+		contador++;
+		seguir=prompt("¿Quiere ingresar otro número? s/n");
+		seguir=seguir.toLocaleLowerCase();
+	}
+	promedio=acumulador/contador;
+	document.getElementById('txtIdSuma').value=acumulador;
+	document.getElementById('txtIdPromedio').value=promedio;
+}
 
+/*
+Estructura iterativa Do While
 
-	txtIdSuma.value=acumulador;
-	txtIdPromedio.value=acumulador/contador;
+while(condicion)
+{
+	sentencias
+}
 
-}//FIN DE LA FUNCIÓN
+do 
+{
+	sentencias
+}
+while(condicion);
+*/
+
+function mostrarDoWhile()
+{
+	let contador;
+	let acumulador;
+	let numeroIngresado;
+	let promedio;
+	let seguir;
+
+	// Inicializar contador y acumulador
+	contador=0;
+	acumulador=0;
+	
+	do
+	{
+	numeroIngresado=parseInt(prompt("Ingrese un número: "));
+	acumulador+=numeroIngresado;
+	contador++;
+	seguir=prompt("¿Quiere ingresar otro número? s/n");
+	seguir=seguir.toLocaleLowerCase();
+	}
+	while(seguir == 's');
+
+	promedio=acumulador/contador;
+	document.getElementById('txtIdSuma').value=acumulador;
+	document.getElementById('txtIdPromedio').value=promedio;
+}

@@ -1,12 +1,22 @@
 /*
 Al presionar el botón pedir un sexo
-'f' para femenino, 'm' para masculino.*/
+'f' para femenino, 'm' para masculino.
+*/
 function mostrar()
 {
-	var sexoIngresado;
-	sexoIngresado = prompt("ingrese f ó m .");
+	let sexoIngresado;
+	let sexoUsuario;
 
+	sexoIngresado=prompt("Ingrese f ó m.");
+	sexoUsuario=sexoIngresado.toLowerCase();
+	console.log(sexoUsuario);
 
+	while(!(sexoUsuario == "f" || sexoUsuario == "m")){
+		alert("Dato inválido.");
+		sexoIngresado=prompt("Ingrese f ó m.");
+		sexoUsuario=sexoIngresado.toLowerCase();
+		console.log(sexoUsuario);
+	}
 
-	txtIdSexo.value=sexoIngresado;
-}//FIN DE LA FUNCIÓN
+	document.getElementById('txtIdSexo').value=`Seleccionó "${sexoUsuario}".`;
+}
