@@ -7,7 +7,7 @@ D.	Si compra 3  lamparitas bajo consumo marca "ArgentinaLuz"  el descuento es de
 E.	Si el importe final con descuento suma más de $120  se debe sumar un 10% de ingresos brutos en informar del impuesto con el siguiente mensaje:
  ”Usted pago X de IIBB.”, siendo X el impuesto que se pagó. 
   */
-function CalcularPrecio () 
+function CalcularPrecioSwitchIf() 
 {
     let cantidadLamparitas;
     let costoUnidad;
@@ -115,6 +115,9 @@ function CalcularPrecioOtraForma()
     costoUnidad=35;
 
     switch(cantidadLamparitas){
+        default:
+            porcentajeDescuento=50;
+            break;
         case 5:
             if(marca == "ArgentinaLuz"){
                 porcentajeDescuento=40;
@@ -144,9 +147,6 @@ function CalcularPrecioOtraForma()
         case 1:
             porcentajeDescuento=0;
             break;
-        default:
-            porcentajeDescuento=50;
-            break;
     }
     precioBruto=cantidadLamparitas*costoUnidad;
     descuento=precioBruto*(porcentajeDescuento/100);
@@ -169,3 +169,93 @@ function CalcularPrecioOtraForma()
         alert(mensaje);
     }
 }
+
+function CalcularPrecio()
+{
+    let cantidadLamparitas;
+    let costoUnidad;
+    let porcentajeDescuento;
+    let descuento;
+    let porcentajeImpuesto;
+    let costoImpuesto;
+    let marca;
+    let precioBruto;
+    let precioFinal;
+    let precioConImpuesto;
+    let mensaje;
+    let mensajeImpuesto;
+
+    cantidadLamparitas=document.getElementById('txtIdCantidad').value;
+    cantidadLamparitas=parseInt(cantidadLamparitas);
+    marca=document.getElementById('Marca').value;
+
+    costoUnidad=35;
+
+    switch (cantidadLamparitas) {
+        default:
+            porcentajeDescuento=50;
+            break;
+        case 5:
+            switch (marca) {
+                case "ArgentinaLuz":
+                    porcentajeDescuento=40;
+                    break;
+                default:
+                    porcentajeDescuento=30;
+                   break;
+            }
+            break;
+        case 4:
+            switch (marca) {
+                case "ArgentinaLuz":
+                case "FelipeLamparas":
+                    porcentajeDescuento=25;
+                    break;
+                default:
+                    porcentajeDescuento=20;
+                    break;
+            }
+            break;
+        case 3:
+            switch (marca) {
+                case "ArgentinaLuz":
+                    porcentajeDescuento=15;
+                    break;
+                case "FelipeLamparas":
+                    porcentajeDescuento=10;
+                    break;
+                default:
+                    porcentajeDescuento=5;
+                    break;
+            }
+            break;
+        case 2:
+        case 1:    
+            porcentajeDescuento=0;
+                    break; 
+    }
+
+    precioBruto=cantidadLamparitas*costoUnidad;
+    descuento=precioBruto*(porcentajeDescuento/100);
+    precioFinal=precioBruto-descuento;
+    console.log(cantidadLamparitas);
+    console.log(marca);
+    console.log(descuento);
+    console.log(precioBruto);
+    document.getElementById('txtIdprecioDescuento').value=precioFinal;
+
+    if (precioFinal > 120){
+        porcentajeImpuesto=10;
+        costoImpuesto=precioFinal*(porcentajeImpuesto/100);
+        precioConImpuesto=precioFinal+costoImpuesto;
+        mensajeImpuesto=`Ud. pagó $${precioConImpuesto}, siendo $${costoImpuesto} el impuesto.`;
+        alert(mensajeImpuesto);
+    }
+    else {
+        mensaje=`Compraste ${cantidadLamparitas} lamparas de ${marca}. El Precio Final es: $${precioFinal}`;
+        alert(mensaje);
+    }
+}
+
+// Federico Dacal
+// Division "A"
