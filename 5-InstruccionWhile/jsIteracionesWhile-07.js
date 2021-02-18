@@ -60,11 +60,11 @@ function mostrarDoWhile()
 	acumulador+=numeroIngresado;
 	contador++;
 	seguir=prompt("¿Quiere ingresar otro número? s/n");
-	seguir=seguir.toLocaleLowerCase();
+	seguir=seguir.toLowerCase();
 	}
 	while(seguir == 's');
 
 	promedio=acumulador/contador;
 	document.getElementById('txtIdSuma').value=acumulador;
-	document.getElementById('txtIdPromedio').value=promedio;
+	document.getElementById('txtIdPromedio').value=promedio.toFixed(2);
 }

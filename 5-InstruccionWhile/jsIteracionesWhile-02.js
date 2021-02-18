@@ -17,3 +17,6 @@ function mostrar()
 	}
 	alert(`Fuera del While.`);
 }
+
+// Federico Dacal
+// Division "A"

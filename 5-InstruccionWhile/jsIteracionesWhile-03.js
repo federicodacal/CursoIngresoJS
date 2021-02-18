@@ -8,8 +8,22 @@ function mostrar()
 	claveIngresada=prompt("Ingrese la clave.");
 
 	while(claveIngresada != "utn750"){
-	alert("Clave es incorrecta.");
-	claveIngresada=prompt("Por favor, ingrese la clave");
+	alert("Clave incorrecta.");
+	claveIngresada=prompt("Por favor, ingrese la clave.");
 	}
-	
+	alert("Ingresaste!");
+}
+
+// Federico Dacal
+// Division "A"
+
+function mostrarDoWhile()
+{
+	let claveIngresada;
+
+	do{
+		claveIngresada=prompt("Por favor, ingrese la clave.");
+	}
+	while(claveIngresada != "utn750");
+	alert("Ingresaste!");
 }

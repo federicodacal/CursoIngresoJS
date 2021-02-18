@@ -5,8 +5,8 @@ con números ASCENDENTE, desde el 1 al 10.
 function mostrar()
 {
 	let contador;
-	let mensaje;
-
+	let mensaje
+	
 	contador = 0;
 	while(contador < 10){
 
