@@ -20,7 +20,7 @@ function mostrar()
 		acumulador+=numeroIngresado;
 		contador++;
 		seguir=prompt("¿Quiere ingresar otro número? s/n");
-		seguir=seguir.toLocaleLowerCase();
+		seguir=seguir.toLowerCase();
 	}
 	promedio=acumulador/contador;
 	document.getElementById('txtIdSuma').value=acumulador;
