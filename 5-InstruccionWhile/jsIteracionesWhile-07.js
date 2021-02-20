@@ -59,10 +59,10 @@ function mostrarDoWhile()
 	numeroIngresado=parseInt(prompt("Ingrese un número: "));
 	acumulador+=numeroIngresado;
 	contador++;
-	seguir=prompt("¿Quiere ingresar otro número? s/n");
+	seguir=prompt("¿Quiere ingresar otro número? s/n");	// Variable de control
 	seguir=seguir.toLowerCase();
 	}
-	while(seguir == 's');
+	while(seguir == 's');	// Comparar
 
 	promedio=acumulador/contador;
 	document.getElementById('txtIdSuma').value=acumulador;
