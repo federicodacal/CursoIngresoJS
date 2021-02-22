@@ -24,6 +24,7 @@ function mostrar()
         } else {
            // console.log("Negativo");
            flag = 1;
+            // Se utiliza flag y no un contador porque sólo necesitamos saber si el user entró al menos 1 vez (sin la necesidad de seguir contando)   
            acumuladorNegativo*=numeroIngresado;
         }
         seguir=prompt("¿Quiere ingresar otro número? s/n");

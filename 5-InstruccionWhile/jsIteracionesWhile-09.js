@@ -15,7 +15,8 @@ function mostrar()
 	do {
 		numeroIngresado=prompt("Ingrese número");
 		numeroIngresado=parseInt(numeroIngresado);
-		if(flag == 0){
+		if(flag == 0){	
+		// flag se utiliza para guardar el primer número en caso que el user decida ingresar sólo uno
 			numeroMaximo=numeroIngresado;
 			numeroMinimo=numeroIngresado;
 			flag=1;
@@ -46,3 +47,32 @@ Pasos:
 5) Muestro información (fuera del bucle)
 +) Testear funcionalidades por etapas antes de finalizar el programa
 */
+
+function repaso()
+{
+	let numeroIngresado;
+	let numeroMaximo;
+	let numeroMinimo;
+	let seguir;
+	let flag;
+
+	flag=0;
+
+	do {
+		numeroIngresado=prompt("Ingrese número");
+		numeroIngresado=parseInt(numeroIngresado);
+		if(flag == 0 || numeroIngresado > numeroMaximo){
+			numeroMaximo=numeroIngresado;
+		}
+		if (flag == 0 || numeroIngresado < numeroMinimo){
+			numeroMinimo=numeroIngresado;
+			flag=1;
+			// flag se guarda en la última condición
+		}
+		seguir=prompt("¿Quiere ingresar otro número? s/n");
+		seguir=seguir.toLowerCase();
+	} while (seguir == 's');
+
+	document.getElementById('txtIdMaximo').value=`El máximo es ${numeroMaximo}`;
+	document.getElementById('txtIdMinimo').value=`El mínimo es ${numeroMinimo}`;
+}
