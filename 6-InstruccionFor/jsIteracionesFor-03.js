@@ -7,6 +7,6 @@ function mostrar()
 	iteraciones=parseInt(iteraciones);
 
 	for (i=0;i<iteraciones;i++){
-		alert("Hola UTN-Fra");
+		console.log("Hola UTN-Fra"+i);
 	}
 }

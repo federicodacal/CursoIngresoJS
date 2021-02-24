@@ -31,6 +31,8 @@ function mostrar()
     contadorPares=0;
     acumuladorNegativos=0;
     acumuladorPositivos=0;
+    promedioNegativos=0;
+    promedioPositivos=0;
 
     do {
         numeroIngresado=prompt("Ingrese un número:")
@@ -51,20 +53,17 @@ function mostrar()
            contadorNegativos++;
         }
         seguir=prompt("¿Quiere ingresar otro número? s/n");
-		seguir=seguir.toLowerCase();
+        seguir=seguir.toLowerCase();
     } while (seguir == 's');
 
-    resta=acumuladorPositivos-acumuladorNegativos;
-    promedioPositivos=acumuladorPositivos/contadorPositivos;
-    promedioNegativos=acumuladorNegativos/contadorNegativos;
+    if(contadorNegativos>0){
+        promedioNegativos=acumuladorNegativos/contadorNegativos;
+    }
+    if(contadorPositivos>0){
+        promedioPositivos=acumuladorPositivos/contadorPositivos;
+    }
 
-    if(contadorNegativos==0){
-        acumuladorNegativos=0;
-        promedioNegativos=0;
-    }
-    if(contadorPositivos==0){
-        promedioPositivos=0;
-    }
+    resta=contadorPositivos-contadorPositivos;
 
     document.write(`1-Suma de los negativos: ${acumuladorNegativos} <br>
     2-Suma de los positivos: ${acumuladorPositivos} <br>

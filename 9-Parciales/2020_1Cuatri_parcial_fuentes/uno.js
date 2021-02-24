@@ -146,34 +146,3 @@ function uno()
 	}
 }
 
-
-function mostrar()
-{
-	var valorDeVerdad;
-	var edad;
-	var nombre;
-	var sexo;
-
-	valorDeVerdad=isNaN("Hola");	// true (no es un número)
-	valorDeVerdad=isNaN("Hola 22"); // true (no es un número)
-	valorDeVerdad=isNaN("33");		// false (es un número)
-	valorDeVerdad=isNaN(3);			// false (es un numero)
-
-	edad=prompt("Ingrese edad"); 	// validacion de un número
-	while(isNaN(edad)==true || edad<1 || edad>105)
-	{
-		edad=prompt("Error, ingrese edad");
-	}
-
-	nombre=prompt("Ingrese nombre");	// validación de caracteres
-	while(isNaN(nombre)==false)
-	{
-		nombre=prompt("Error, ingrese nombre");
-	}
-
-	sexo=prompt("Ingrese sexo");	// validación de caracteres
-	while(isNaN(sexo)==false || sexo != 'f' && sexo != 'm')
-	{
-		sexo=prompt("Error, ingrese sexo");
-	}
-}

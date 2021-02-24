@@ -19,13 +19,20 @@ function mostrar()
 
 /*
 Secuencias Condicionales: Estructuras If, Switch
+
+if(condicion)
+{
+sentencias
+} <-- continúa con el código de las líneas siguientes
+
 Secuencias Iterativas: Estructura While
 
 var = i	-> variable de inicializacion/control
 while (condicion)	-> Utiliza variable de control
 {
 sentencias y modificación de la variable de control
-}
+} <-- regresa a evaluar la lógica
+
 Mientras la condicion sea verdadera (true) continuará iterando (y evaluando la condicion) hasta que la condicion sea falsa (false)
 */
 
@@ -39,9 +46,9 @@ function repaso()
 	contador=0;
 	acumulador=0;
 	while (contador<5){
-		contador++;
-		numero=promt(`Ingrese el número ${numero}:`);
+		numero=prompt(`Ingrese el número ${numero}:`);
 		acumulador+=numero;
+		contador++;
 	}
 	promedio=acumulador/contador;
 	alert(`El promedio es ${promedio}`);
@@ -58,11 +65,30 @@ function repaso()
 	respuesta='s';
 	acumulador=0;
 	while (respuesta=='s'){
-		contador++;
-		numero=promt(`Ingrese el número ${numero}:`);
+		numero=prompt(`Ingrese el número ${numero}:`);
 		acumulador+=numero;
-		respuesta=prompt("¿Desea continuar? s/n")
+		respuesta=prompt("¿Desea continuar? s/n");
+		contador++;
 	}
 	promedio=acumulador/contador;
 	alert(`El promedio es ${promedio}`);
+}
+
+function repaso()
+{
+	let clave;
+
+	clave=prompt("Ingrese la clave");
+	while(clave != "clavesecreta"){
+		clave=prompt("Error. Ingrese la clave correctamente.");
+	}
+}
+
+function repaso()
+{
+	let clave;
+
+	do {
+		clave=prompt("Ingrese la clave");
+	} while (clave != "clavesecreta");
 }
