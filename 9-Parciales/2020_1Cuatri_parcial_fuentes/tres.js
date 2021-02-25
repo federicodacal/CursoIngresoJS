@@ -95,10 +95,7 @@ function mostrar()
 	// d) cuantas personas de la tercera edad (mas de 60 años) , tienen mas de 38 de temperatura
 	if(edad>59 && temperatura>38){
 		cantidadMayoresDe60con38Temp++;
-	// d)
-	alert(`Hay ${cantidadMayoresDe60con38Temp} pasajeros mayores de 60 años con temperatura superior a 38°`);
 	}
-
 	seguir=prompt("¿Desea continuar cargando pasajeros? s/n")	
 	} while(seguir =='s');
 
@@ -108,7 +105,14 @@ function mostrar()
 	alert(`El número de mayores de edad viudos es ${contadorMayoresEdadViudos}`);
 	// c)
 	alert(`Hay ${contadorHombresSolteros+contadorHombresViudos} hombres viudos y solteros (solteros: ${contadorHombresSolteros}, viudos: ${contadorHombresViudos})`);
+	// d)
+	alert(`Hay ${cantidadMayoresDe60con38Temp} pasajeros mayores de 60 años con temperatura superior a 38°`);
 	// e)
+	if(contadorHombresSolteros > 0){
 	promedioEdadHombresSolteros=acumuladorEdadHombresSolteros/contadorHombresSolteros;
 	alert(`El promedio de edad entre los hombres solteros es ${promedioEdadHombresSolteros}`);
+	}
+	else{
+		alert("No hay pasajeros hombres solteros");
+	}
 }
