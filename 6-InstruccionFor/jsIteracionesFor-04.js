@@ -8,4 +8,5 @@ function mostrar()
 			break;
 		}
 	}
+	alert("Fuera del for");
 }
