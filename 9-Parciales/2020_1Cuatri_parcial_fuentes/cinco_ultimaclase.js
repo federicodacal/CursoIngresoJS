@@ -78,6 +78,7 @@ function mostrar()
 
     // FLAGS
     let flagSinPelo;
+    let flagGatoSinPelo;
 
     // ACUMULADORES
     let acumuladorTotalPeso;

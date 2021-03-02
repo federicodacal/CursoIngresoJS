@@ -71,7 +71,7 @@ function probarEjercicio()
     contadorGenerico=0;
     iteracion=0;
 
-    for(iteracion=0;iteracion<3;iteracion++){
+    for(iteracion=0;iteracion<10;iteracion++){
 
         tipo=prompt("Ingrese tipo de mascota (gato, perro, pajaro y otros): ");
         tipo=tipo.toLowerCase();
