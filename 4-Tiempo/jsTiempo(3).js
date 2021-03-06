@@ -1,4 +1,4 @@
-var miIntervalo ;
+var miIntervalo;
 var contador=0;
 
 function inicio()
@@ -11,7 +11,7 @@ function inicio()
 function SegundosEnElAire() {
 
 	contador=contador +1;
-    alert("Bienvenido a la UTN FRA, cantidad ="+contador);
+    alert("Bienvenido a la UTN FRA, cantidad:"+contador);
     
 }//FIN DE LA FUNCIÓN SegundosEnElAire
 

@@ -1,8 +1,7 @@
-var miTemporizador ;
+var miTemporizador;
 var contador=0;
 var tiempoInicio;
 var tiempoFinal;
-
 
 function inicio()
 {

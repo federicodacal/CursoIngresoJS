@@ -1,4 +1,4 @@
-var miTemporizador ;
+var miTemporizador;
 var contador=0;
 
 function inicio()
@@ -9,7 +9,6 @@ function inicio()
 }//FIN DE LA FUNCIÓN inicio
 
 function SegundosEnElAire() {
-
 
     alert("Bienvenido a la UTN FRA");
    

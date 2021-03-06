@@ -18,8 +18,4 @@ document.write("El contenido del vector es: <br>");
 		document.write("Posicion "+i+"-->"+miArray[i]+"<br>");
 	}
 
-
-
-
-
-}//FIN DE LA FUNCIÓN
+}

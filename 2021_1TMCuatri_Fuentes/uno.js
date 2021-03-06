@@ -109,7 +109,7 @@ function mostrar()
 				contadorIac++;
 				acumuladorUnidadIac+=cantidadUnidades;
 				if(precio<201){
-					contadorIacPrecio200oMenos;
+					contadorIacPrecio200oMenos++;
 				}
 				break;
 			default: // quat

@@ -16,8 +16,4 @@ function mostrar()
 		document.write("Posicion "+i+"-->"+miArray[i]+"<br>");
 	}
 
-
-
-
-
-}//FIN DE LA FUNCIÓN
+}

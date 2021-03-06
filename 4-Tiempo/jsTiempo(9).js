@@ -1,4 +1,4 @@
-var miTemporizador ;
+var miTemporizador;
 var contador=0;
 var tiempoInicio;
 var tiempoFinal;
@@ -6,7 +6,7 @@ var tiempoFinal;
 
 function inicio()
 {
-	var random = Math.floor(Math.random()*10000 )+2000;
+	var random = Math.floor(Math.random()*10000)+2000;
 	//alert(random);
 	alert("function inicio.");
 	miTemporizador = setTimeout(SegundosEnElAire, random);

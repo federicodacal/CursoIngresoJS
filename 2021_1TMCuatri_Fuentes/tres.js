@@ -5,8 +5,8 @@
 Debemos alquilar el servicio de transporte para llegar a Mar del Plata con un grupo de personas, de cada persona debemos optener los siguientes datos:
 Nombre,
 estado civil ("soltero", "casado" o "viudo"),
-edad( solo mayores de edad, mas de 17),
-temperatura corporal(validar por favor)
+edad (solo mayores de edad, mas de 17),
+temperatura corporal (validar por favor)
 y sexo (validar).
 NOTA:el precio por pasajero es de $600.
 Se debe informar (solo si corresponde):
@@ -90,16 +90,16 @@ function mostrar()
 					contadorViudosMas60++;
 				}
 				break;
-			case "casado":
+			case "soltero":
+				if(sexo=='f'){
+					if(flagPrimerSoltera==0 || edad<edadSolteraMasJoven){
+						edadSolteraMasJoven=edad;
+						nombreSolteraMasJoven=nombre;
+						flagPrimerSoltera=1;
+						}
+					}
 				break;
 			default: // soltero
-				if(sexo=='f'){
-				if(flagPrimerSoltera==0 || edad<edadSolteraMasJoven){
-					edadSolteraMasJoven=edad;
-					nombreSolteraMasJoven=nombre;
-					flagPrimerSoltera=1;
-					}
-				}
 				break;
 		}
 
